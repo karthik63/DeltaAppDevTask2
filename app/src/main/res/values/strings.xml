@@ -1,0 +1,7 @@
+<resources>
+    <string name="listen_button">listen</string>
+    <string name="app_name">Task 2</string>
+    <string name="about">About</string>
+    <string name="about_page_line1">My submission for the second task of Delta AppDev inductions.\n\nWould be grateful for feedback.</string>
+    <string name="title_activity_about_page">AboutPage</string>
+</resources>
