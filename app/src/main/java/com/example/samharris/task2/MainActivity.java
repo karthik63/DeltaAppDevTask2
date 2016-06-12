@@ -58,16 +58,16 @@ public class MainActivity extends AppCompatActivity {
     private void scaleImg(boolean ifZoom)
     {
 
-        if(ifZoom==true&&mparam.width+10<dispWd*.7)
+        if(ifZoom&&mparam.width+10<dispWd*.7)
         {
-            mparam.width +=200;
-            imgDim+=200;
+            mparam.width +=10;
+            imgDim+=10;
         }
 
-        if(ifZoom==false&&mparam.width-10>25)
+        if(!ifZoom&&mparam.width-10>25)
         {
-            mparam.width -=100;
-            imgDim-=100;
+            mparam.width -=10;
+            imgDim-=10;
         }
 
         i.setLayoutParams(mparam);
@@ -76,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void moveImg(boolean ifDefault,int top,int bottom,int left, int right)
     {
-        if(ifDefault==true)
+        if(ifDefault)
         {
             topMargin = top = dispHt/2 - 2*imgDim ;
             bottomMargin = bottom = 0;
@@ -193,22 +193,22 @@ public class MainActivity extends AppCompatActivity {
 
             if((Objects.equals("up", str))||(Objects.equals("Up", str)))
             {
-                topMargin-=100;
+                topMargin-=10;
                 moveImg(false, topMargin, bottomMargin, leftMargin, rightMargin);
             }
             if((Objects.equals("down", str))||(Objects.equals("Down", str)))
             {
-               topMargin+=100;
+               topMargin+=10;
                 moveImg(false, topMargin, bottomMargin, leftMargin, rightMargin);
             }
             if((Objects.equals("left", str))||(Objects.equals("Left", str)))
             {
-                leftMargin-=100;
+                leftMargin-=10;
                 moveImg(false, topMargin, bottomMargin, leftMargin, rightMargin);
             }
             if((Objects.equals("right", str))||(Objects.equals("Right", str)))
             {
-                leftMargin+=100;
+                leftMargin+=10;
                 moveImg(false, topMargin, bottomMargin, leftMargin, rightMargin);
             }
 
