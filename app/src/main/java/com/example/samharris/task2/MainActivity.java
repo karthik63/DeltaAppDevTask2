@@ -20,23 +20,14 @@ import java.util.Objects;
 public class MainActivity extends AppCompatActivity {
 
     final static int confirm = 97;
-
-    RelativeLayout.LayoutParams mparam;
-
-    ImageView i;
-
-    RelativeLayout myLayout;
-
-    Button bVoice;
-
-    TextView tv;
-
-    private int topMargin,bottomMargin,leftMargin,rightMargin;
-
     private static int dispHt;
-
     private static int dispWd;
-
+    RelativeLayout.LayoutParams mparam;
+    ImageView i;
+    RelativeLayout myLayout;
+    Button bVoice;
+    TextView tv;
+    private int topMargin,bottomMargin,leftMargin,rightMargin;
     private int imgDim = 100;
 
 
@@ -109,7 +100,8 @@ public class MainActivity extends AppCompatActivity {
 
         }
     }
-    //function to set the layout parameters
+
+    //function to set the layout  parameters
     private void setImgParams(int top,int bottom,int left, int right)
     {
         mparam = new RelativeLayout.LayoutParams(imgDim,imgDim);
