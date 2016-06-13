@@ -39,6 +39,8 @@ public class MainActivity extends AppCompatActivity {
 
     private int imgDim = 100;
 
+
+    //To change the shape -circle,square,triangle
     private void changeImg(int key)
     {
         if(key==0)
@@ -55,9 +57,11 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    //To change the size of the imageView
     private void scaleImg(boolean ifZoom)
     {
 
+        //ifZoo is true for increasing size
         if(ifZoom&&mparam.width+10<dispWd*.7)
         {
             mparam.width +=10;
@@ -74,8 +78,10 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    //Function to move img based on specified margins
     private void moveImg(boolean ifDefault,int top,int bottom,int left, int right)
     {
+        //if ifDefault is true set the default margins
         if(ifDefault)
         {
             topMargin = top = dispHt/2 - 2*imgDim ;
@@ -89,8 +95,7 @@ public class MainActivity extends AppCompatActivity {
         else
 
         {
-
-
+            //To adjust for drawable going out of screen
             if(top>dispHt-420)
                topMargin = top  = dispHt/2  -2*imgDim;
             if(top<dispHt/2-2*imgDim)
@@ -104,7 +109,7 @@ public class MainActivity extends AppCompatActivity {
 
         }
     }
-
+    //function to set the layout parameters
     private void setImgParams(int top,int bottom,int left, int right)
     {
         mparam = new RelativeLayout.LayoutParams(imgDim,imgDim);
@@ -173,6 +178,7 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    //Handling the voice commands
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
